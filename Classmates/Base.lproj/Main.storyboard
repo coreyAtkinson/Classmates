@@ -85,7 +85,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add Student" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="czT-xg-lpN">
-                                <rect key="frame" x="139" y="526" width="97" height="34"/>
+                                <rect key="frame" x="139" y="490" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SmY-dU-MDX">
+                                <rect key="frame" x="118" y="526" width="62" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -96,6 +102,10 @@
                                 <color key="tintColor" red="0.85098040100000005" green="0.56078433989999998" blue="0.73725497719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                <connections>
+                                    <action selector="addAction:" destination="sl0-xm-ay9" eventType="touchUpInside" id="j4Q-Yp-Yo6"/>
+                                    <action selector="nextAction:" destination="sl0-xm-ay9" eventType="touchUpInside" id="hGi-8G-RZ9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6F6-rc-F04">
                                 <rect key="frame" x="101" y="316" width="60" height="35"/>
@@ -103,6 +113,9 @@
                                 <color key="tintColor" red="0.85098040100000005" green="0.56078433989999998" blue="0.73725497719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Next"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="sl0-xm-ay9" eventType="touchUpInside" id="e1i-Lc-fiD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTr-cH-cyl">
                                 <rect key="frame" x="139" y="232" width="97" height="21"/>
@@ -132,11 +145,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hair" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0kg-Yn-Luc">
+                                <rect key="frame" x="188" y="526" width="64" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="w69-Ij-qDr"/>
                         <color key="backgroundColor" red="0.94901967050000002" green="0.81176471709999998" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="DpO-Z3-7db"/>
+                    <connections>
+                        <outlet property="ageOutlet" destination="SmY-dU-MDX" id="K0Y-Xc-ZM1"/>
+                        <outlet property="displayAgeOutlet" destination="KTr-cH-cyl" id="5ak-67-bRC"/>
+                        <outlet property="displayHairOutlet" destination="9hW-LY-aeG" id="Emg-KH-Pom"/>
+                        <outlet property="displayNameOutlet" destination="T8t-C8-1ia" id="fvp-Fg-w2g"/>
+                        <outlet property="hairOutlet" destination="0kg-Yn-Luc" id="HWu-hI-Rf4"/>
+                        <outlet property="nameOutlet" destination="SmY-dU-MDX" id="U3q-b5-9g0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcx-vP-STE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
