@@ -18,6 +18,7 @@
 		B91B19052AD6E4E000D26EE6 /* ClassmatesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B19042AD6E4E000D26EE6 /* ClassmatesUITestsLaunchTests.swift */; };
 		B91B19122AD6E8F800D26EE6 /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B19112AD6E8F800D26EE6 /* TwoViewController.swift */; };
 		B91B19142AD6EABE00D26EE6 /* Classmate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B19132AD6EABE00D26EE6 /* Classmate.swift */; };
+		B99EA0A52ADD88A1007E24CA /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99EA0A42ADD88A1007E24CA /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B91B19042AD6E4E000D26EE6 /* ClassmatesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassmatesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B91B19112AD6E8F800D26EE6 /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		B91B19132AD6EABE00D26EE6 /* Classmate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classmate.swift; sourceTree = "<group>"; };
+		B99EA0A42ADD88A1007E24CA /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		B91B18D52AD6E4DE00D26EE6 = {
 			isa = PBXGroup;
 			children = (
+				B99EA0A42ADD88A1007E24CA /* QuizViewController.swift */,
 				B91B19132AD6EABE00D26EE6 /* Classmate.swift */,
 				B91B18E02AD6E4DE00D26EE6 /* Classmates */,
 				B91B18F72AD6E4E000D26EE6 /* ClassmatesTests */,
@@ -267,6 +270,7 @@
 				B91B18E62AD6E4DE00D26EE6 /* ViewController.swift in Sources */,
 				B91B19142AD6EABE00D26EE6 /* Classmate.swift in Sources */,
 				B91B18E22AD6E4DE00D26EE6 /* AppDelegate.swift in Sources */,
+				B99EA0A52ADD88A1007E24CA /* QuizViewController.swift in Sources */,
 				B91B18E42AD6E4DE00D26EE6 /* SceneDelegate.swift in Sources */,
 				B91B19122AD6E8F800D26EE6 /* TwoViewController.swift in Sources */,
 			);

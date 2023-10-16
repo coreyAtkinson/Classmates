@@ -8,7 +8,7 @@
 import UIKit
 
 class TwoViewController: UIViewController {
-    var classmates : [Classmate] = [Classmate(name: "Corey", age: 16, hair: .brown), Classmate(name: "Claire", age: 18, hair: .chestnut), Classmate(name: "Olivia", age: 17, hair: .brown), Classmate(name: "Natilie", age: 18, hair: .brown), Classmate(name: "Mykaela", age: 17, hair: .brown)]
+    var classmates : [Classmate] = [Classmate(name: "dCorey", age: 16, hair: .brown), Classmate(name: "cClaire", age: 18, hair: .chestnut), Classmate(name: "aOlivia", age: 17, hair: .brown), Classmate(name: "bNatilie", age: 18, hair: .brown), Classmate(name: "eMykaela", age: 17, hair: .brown)]
     var i = 1
     @IBOutlet weak var displayHairOutlet: UILabel!
     @IBOutlet weak var displayAgeOutlet: UILabel!
@@ -20,13 +20,14 @@ class TwoViewController: UIViewController {
     
     @IBOutlet weak var hairOutlet: UITextField!
     
+    @IBOutlet weak var errorOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         displayNameOutlet.text = "\(classmates[0].name)"
         displayAgeOutlet.text = "\(classmates[0].age)"
         displayHairOutlet.text = "\(classmates[0].hair)"
-        
+        errorOutlet.text = ""
         
 
         // Do any additional setup after loading the view.
@@ -54,6 +55,11 @@ class TwoViewController: UIViewController {
     @IBAction func addAction(_ sender: UIButton) {
         if nameOutlet.text == "" || ageOutlet.text == "" || hairOutlet.text == "" {
             print("error")
+            errorOutlet.text = "invalad imput"
+        }
+        else if Int(ageOutlet.text!) ?? 0 == 0
+        {
+            errorOutlet.text = "invalad imput"
         }
         else{
             
@@ -83,10 +89,23 @@ class TwoViewController: UIViewController {
             }
             else
             {
-                print(error)
+                print("error")
             }
     }
     }
     
 
+    @IBAction func sortAction(_ sender: UIButton) {
+        
+     classmates =  classmates.sorted { $0.name.lowercased() < $1.name.lowercased() }
+        
+        
+        
+        displayNameOutlet.text = "\(classmates[0].name)"
+        displayAgeOutlet.text = "\(classmates[0].age)"
+        displayHairOutlet.text = "\(classmates[0].hair)"
+        
+        
+        
+    }
 }
