@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    var classmates1 : [Classmate] = [Classmate(name: "dCorey", age: 16, hair: .brown), Classmate(name: "cClaire", age: 18, hair: .chestnut), Classmate(name: "aOlivia", age: 17, hair: .brown), Classmate(name: "bNatilie", age: 18, hair: .brown), Classmate(name: "eMykaela", age: 17, hair: .brown)]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,13 +19,24 @@ class ViewController: UIViewController {
         
     }
 
-    @IBAction func startAction(_ sender: UIButton) {
+    @IBAction func tableAction(_ sender: UIButton) {
         
         performSegue(withIdentifier: "toMain", sender: self)
         
         
         
     }
-    
+    @IBAction func startAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toTable", sender: self)
+        
+        
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! QuizViewController
+       
+        nvc.hello = self
+
+    }
 }
 

@@ -8,7 +8,9 @@
 import UIKit
 
 class TwoViewController: UIViewController {
-    var classmates : [Classmate] = [Classmate(name: "dCorey", age: 16, hair: .brown), Classmate(name: "cClaire", age: 18, hair: .chestnut), Classmate(name: "aOlivia", age: 17, hair: .brown), Classmate(name: "bNatilie", age: 18, hair: .brown), Classmate(name: "eMykaela", age: 17, hair: .brown)]
+  
+    var hello : ViewController!
+    var classmates : [Classmate] = []
     var i = 1
     @IBOutlet weak var displayHairOutlet: UILabel!
     @IBOutlet weak var displayAgeOutlet: UILabel!
@@ -24,10 +26,13 @@ class TwoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+     
+        
         displayNameOutlet.text = "\(classmates[0].name)"
         displayAgeOutlet.text = "\(classmates[0].age)"
         displayHairOutlet.text = "\(classmates[0].hair)"
         errorOutlet.text = ""
+         
         
 
         // Do any additional setup after loading the view.
@@ -92,6 +97,7 @@ class TwoViewController: UIViewController {
                 print("error")
             }
     }
+        hello.classmates1 = classmates
     }
     
 
@@ -105,7 +111,7 @@ class TwoViewController: UIViewController {
         displayAgeOutlet.text = "\(classmates[0].age)"
         displayHairOutlet.text = "\(classmates[0].hair)"
         
-        
+        hello.classmates1 = classmates
         
     }
 }
