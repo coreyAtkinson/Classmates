@@ -18,25 +18,38 @@ class ViewController: UIViewController {
         
         
     }
-
+    
     @IBAction func tableAction(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "toMain", sender: self)
-        
-        
-        
-    }
-    @IBAction func startAction(_ sender: UIButton) {
         performSegue(withIdentifier: "toTable", sender: self)
         
         
         
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nvc = segue.destination as! QuizViewController
-       
-        nvc.hello = self
-
+    @IBAction func startAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "toMain", sender: self)
+        
+        
+        
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toMain"
+        {
+    let nvc = segue.destination as!TwoViewController
+            nvc.hello = self
+            nvc.classmates = classmates1
+        }
+        
+     else
+        {
+     let nvc2 = segue.destination as! QuizViewController
+        
+         nvc2.hello = self
+         nvc2.classmates = classmates1
+     
+     }
+       
+    }
+    
 }
-
