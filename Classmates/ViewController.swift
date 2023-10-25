@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var classmates1 : [Classmate] = [Classmate(name: "dCorey", age: 16, hair: .brown), Classmate(name: "cClaire", age: 18, hair: .chestnut), Classmate(name: "aOlivia", age: 17, hair: .brown), Classmate(name: "bNatilie", age: 18, hair: .brown), Classmate(name: "eMykaela", age: 17, hair: .brown)]
+    var classmates1 : [Classmate] = [Classmate(name: "Corey", age: 16, hair: .brown), Classmate(name: "Claire", age: 18, hair: .chestnut), Classmate(name: "Olivia", age: 17, hair: .brown), Classmate(name: "Natilie", age: 18, hair: .brown), Classmate(name: "Mykaela", age: 17, hair: .brown)]
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

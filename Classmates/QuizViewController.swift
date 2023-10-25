@@ -8,7 +8,8 @@
 import UIKit
 
 class QuizViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
+    @IBOutlet weak var viewOutlet: UIButton!
+    var i : Int!
     @IBOutlet weak var errorOutlet: UILabel!
     @IBOutlet weak var hairOutlet: UITextField!
     @IBOutlet weak var ageOutlet: UITextField!
@@ -18,6 +19,7 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableOutlet: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         tableOutlet.delegate = self
         tableOutlet.dataSource = self
         // Do any additional setup after loading the view.
@@ -53,22 +55,28 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
             if h == "blonde"
             {
                 classmates.append(Classmate(name: n, age: Int(a) ?? 0, hair: .blonde))
+                errorOutlet.text = ""
             }
             else if h == "brown"
             {
                 classmates.append(Classmate(name: n, age: Int(a) ?? 0, hair: .brown))
+                errorOutlet.text = ""
             }
+            
             else if h == "black"
             {
                 classmates.append(Classmate(name: n, age: Int(a) ?? 0, hair: .black))
+                errorOutlet.text = ""
             }
             else if h == "red"
             {
                 classmates.append(Classmate(name: n, age: Int(a) ?? 0, hair: .red))
+                errorOutlet.text = ""
             }
             else if h == "red"
             {
                 classmates.append(Classmate(name: n, age: Int(a) ?? 0, hair: .red))
+                errorOutlet.text = ""
             }
             else
             {
@@ -76,7 +84,27 @@ class QuizViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             hello.classmates1 = classmates
             tableOutlet.reloadData()
+            
         }
     }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        i = indexPath.row
+      performSegue(withIdentifier: "toDisplay", sender: nil)
+    }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc2 = segue.destination as! FinalViewController
+        
+//        nvc2.name = classmates[i].name
+   //     nvc2.age = classmates[i].age
+   //     nvc2.hair = classmates[i].hair
+        
+    }
+    
+    @IBAction func viewAction(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "toDisplay", sender: nil)
+    }
 }
